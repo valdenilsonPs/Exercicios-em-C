@@ -3,12 +3,14 @@ int main()
 {
     int n,*soma,*vencedor,**m,*resultado,i,j,a=0,vezes=1;
     scanf("%d",&n);
+
     while(n!=0)
     {
         soma=(int*)malloc(n*sizeof(int));
-         resultado=(int*)malloc(vezes*sizeof(int));
+        resultado=(int*)malloc(vezes*sizeof(int));
         vencedor=(int*)malloc(n*sizeof(int));
         m=(int**)malloc(n*sizeof(int*));
+
         for(i=0;i<n;i++)
         {
             soma[i]=0;
@@ -52,6 +54,7 @@ int main()
     for(i=0;i<vezes;i++)
             {
                 printf("%d",resultado[i]);
+                printf("\n");
             }
      return 0;
 }
