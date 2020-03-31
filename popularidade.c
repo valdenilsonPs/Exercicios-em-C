@@ -44,12 +44,14 @@ int main()
         }
 
             resultado[a]=vencedor[a];
-            for(i=0;i<vezes;i++)
-            {
-                printf("%d",resultado[i]);
-            }
+
             a++;
             vezes++;
         scanf("%d",&n);
     }
+    for(i=0;i<vezes;i++)
+            {
+                printf("%d",resultado[i]);
+            }
+     return 0;
 }
