@@ -3,19 +3,19 @@ int main()
 {
     int qntValores;
     int soma = 0;
-    int i;
+    int i,*valor;
 
-    printf("Entrada: \n");
+
     scanf("%d", &qntValores);
 
-    int valor[qntValores];
+    valor=(int*)malloc(qntValores*sizeof(int));
 
     for(i = 0; i < qntValores; i++){
         scanf("%d", &valor[i]);
         soma += valor[i];
     }
 
-    printf("saida: %d", soma);
+    printf("%d", soma);
 
     return 0;
 }
