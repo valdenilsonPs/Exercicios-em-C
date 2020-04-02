@@ -6,12 +6,13 @@ int main()
 
     while(n!=0)
     {
-        soma=(int*)malloc(n*sizeof(int));
-        resultado=(int*)malloc(vezes*sizeof(int));
-        vencedor=(int*)malloc(n*sizeof(int));
-        m=(int**)malloc(n*sizeof(int*));
+        soma=(int*)calloc(n*sizeof(int));
+        resultado=(int*)calloc(vezes*sizeof(int));
+        vencedor=(int*)calloc(n*sizeof(int));
+        m=(int**)calloc(n*sizeof(int*));
 
-        for(i=0;i<n;i++)
+
+        for(i=1;i<n;i++)
         {
             soma[i]=0;
 
@@ -20,7 +21,7 @@ int main()
         {
             for(j=0;j<n;j++)
             {
-                scanf("%d",&m[i][j]);
+                scanf("%d",&m[i][j]);fflush(stdin);
             }
         }
         for(i=0;i<n;i++)
@@ -31,11 +32,8 @@ int main()
             }
 
         }
-        for(i=0;i<n;i++)
-        {
+            vencedor[0]=soma[0];
 
-            vencedor[i]=soma[0];
-        }
         for(i=a;i<a+1;i++)
         {
 
